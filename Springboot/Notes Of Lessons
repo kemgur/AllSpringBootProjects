@@ -1,0 +1,71 @@
+Spring Boot
+====ADD DEPENDENCES=====
+1) Spring Web: API acmamizi saglar
+
+2) H2 Database: Immemory Veri tabani olusturur.
+   Provides a fast in-memory database that supports JDBC API and R2DBC access, with a small (2mb) footprint. Supports embedded and server modes as well as a browser based console application.
+
+
+3) Spring Data JPA: Persist data in SQL stores wiht Java Persistence API   using Spring Data and Hibernate
+   Spring Data ve Hibernate kullanarak Java Persistence API ile SQL depolarındaki kalıcı verileri alir 
+
+4) Spring Boot DevTools: Provides fast application restarts, LiveReload, and configurations for enhanced development experience.
+    Gelişmiş geliştirme deneyimi için hızlı uygulama yeniden başlatmaları, LiveReload ve yapılandırmalar sağlar.
+
+5) Base practice: Layert Architecture(Katmanli mimary)
+   a) controller: Diger isimleri: resource, api. API'ler bu package icersinde olur. 
+   		GOREVI: Katmanin en ustunde bulunur. Kullanicidan request'i alir. Validation(dogrulama)'larini yapar. Kullanicindan gelen bilgiyi kontrol eder eger bir hata varsa geri dondurur. Bilgi dogrulama basarili olursa request'i servis katmanina aktarir.
+
+   b) service: Her projenin bir servisi olmali. Icerisine tum servisler konur. Repository'den veriyi ceken ve veriyi getiren kisim. 
+         GOREVI: Is modelimizi isleyen kisimdir. Ornegin iki sayinin toplanmasi gerekiyorsa bunu servis katmani yapar.
+         Servis katmani kendi ripository'si ile konusur.
+         Ornegin: A servisi A repository'si ile konusur ve A modelini isler.(veri tabanindan cagirir ve ya gonderir basit duzeyde.)
+         Aservisi Bservisi'nin B repository'sini cagiramaz.Onun yerine kende katmanindaki B servisi ile konusur onun uzerinden B repository'ye veri aktarir veya alir ve geri doner.
+
+   c) repository: Veri tabani(DB) ile konusmamiz saglar. Model'leri veri tabanina aktaran, veri tabanindan veriyi alip modellere ceviren package'tir. Hibernate bu kisimda kullanilir.
+
+   e) model : entity 'ler ve bunlara yardimci olan ek nesneler bunun icersinde olur.'
+   d) dto : Controller araciligi ile goncereceg imiz nesneler bu package icerisinde olur.dto'su olmayan hic bir API yazmayin. Modelleri dto olamadan expose etmeyin.
+   
+   f) exception: API aracili ile gonderecegimiz exception ve handle lar bu package 'te yer alir.'
+
+
+   =====DEPENDENCES BOLUMUNE EKLEMELER====
+   1) Google'a yaz: spring boot kotlin dependency
+   2) 48.4 Dependency management bul
+      kotlin-reflect
+      kotlin-runtime 
+      kotlin-stdlib
+      kotlin-stdlib-jdk8
+
+   3) Pom.xml hiyarasisi
+      Ust katman: Spring ile ilgili olanlar
+      Orta Katman: Veri tabani dependecy'leri
+      Alt katman: Test dependency'ler konulur.
+
+   4) Baeldung Kolin sitesinden <plugin> leri alabiliriz.
+
+   5) Kolin Class'in özellikleri
+	a) Icerisinde Data classlar yer alir
+	b) Data claslarin içerisinde hash kodlar yer alır
+	c) To string yer alır
+	d) immutable diye bir data oluşturur.
+	e) Getir satar tarla ugrasmiyoruz
+	
+	   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

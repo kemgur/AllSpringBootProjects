@@ -1,0 +1,22 @@
+
+
+1)localhost:8080 yogun olduğu zaman hata verir, bunu engellemek icin Terminale asagidaki kod    girilmelidir.   =>  npx kill-port 8080
+
+2)
+ORCLCDB.localdomain
+
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521/ORClcdb.localdomain
+spring.datasource.username=dsteel
+
+//SULEYMAN HOCANIN PAYLASIMI
+spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521/orcl
+spring.datasource.username=hr
+spring.datasource.password=oracle
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
+server.error.include-message=always
+C
+
