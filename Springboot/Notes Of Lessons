@@ -24,7 +24,7 @@ Spring Boot
 
    c) repository: Veri tabani(DB) ile konusmamiz saglar. Model'leri veri tabanina aktaran, veri tabanindan veriyi alip modellere ceviren package'tir. Hibernate bu kisimda kullanilir.
 
-   e) model : entity 'ler ve bunlara yardimci olan ek nesneler bunun icersinde olur.'
+   e) model : entity 'ler ve bunlara yardimci olan ek nesneler bunun icerisinde olur.'
    d) dto : Controller araciligi ile goncereceg imiz nesneler bu package icerisinde olur.dto'su olmayan hic bir API yazmayin. Modelleri dto olamadan expose etmeyin.
    
    f) exception: API aracili ile gonderecegimiz exception ve handle lar bu package 'te yer alir.'
@@ -52,7 +52,62 @@ Spring Boot
 	d) immutable diye bir data oluşturur.
 	e) Getir satar tarla ugrasmiyoruz
 	
-	   
+   6) @Entity: Bir Class'in veri tabanında bir tabloya karsilik gelmesi icin @Entity annotation'i kullanıyoruz.(We use @Entity annotation(açıklama) to make a class correspond(kôrıspänd-karsilik gelmek) to a table in the database.)
+       @Id: Her tablonun bir id'si olur.Bu id o an oluşturulası istenirse
+       @GenerateValue(generator="UUID") kullanilir. "UUID" o anki zaman alarak unic bir hashcode  oluşturur. Bu hash code bizim unin id' biz olur.Hashcode: 32 harf ve rakamdan oluşur.
+	? Anlami: Bu Alan boş olabilir.Java da option anlamına geliyor
+	
+    7) Cascade(kademeli) Type: nedir turleri nelerdir,		
+/**
+ * Defines the set of cascadable operations that are propagated 
+ * to the associated entity.(İlişkili varlığa yayılan basamaklı işlemler kümesini tanımlar.)
+ * The value <code>cascade=ALL</code> is equivalent to 
+ * <code>cascade={PERSIST, MERGE, REMOVE, REFRESH, DETACH}</code>.
+ */
+public enum CascadeType { 
+    /** Cascade all operations */Tüm işlemleri basamaklandır
+    ALL, 
+    /** Cascade persist operation */ İşlemi kademeli olarak devam ettir
+    PERSIST, 
+    /** Cascade merge operation */Kademeli birleştirme işlemi
+    MERGE, 
+    /** Cascade remove operation */Kaldırma işlemini kademeli
+    REMOVE,
+    /** Cascade refresh operation */Kademeli yenileme işlemi
+    REFRESH,
+    /**
+     * Cascade detach operation//Kademeli ayırma işlemi
+   
+	
+     8) Fetch Type:nedir turleri nelerdir,? //Fetch:gidip getirmek
+
+Defines strategies for fetching data from the database.
+(Veritabanından veri almak için stratejileri tanımlar.)
+
+ The EAGER strategy is a requirement on the persistence provider runtime that data must be eagerly fetched. (EAGER stratejisi, kalıcılık sağlayıcı çalışma zamanı için verilerin hevesle alınması gereken bir gerekliliktir.)
+
+The LAZY strategy is a hint to the persistence provider runtime that data should be fetched lazily when it is first accessed.(LAZY stratejisi, kalıcılık sağlayıcı çalışma zamanına, verilere ilk erişildiğinde tembel bir şekilde getirilmesi gerektiğine dair bir ipucudur.)
+
+ The implementation is permitted to eagerly fetch data for which the LAZY strategy hint has been specified.(Uygulamaya, LAZY strateji ipucunun belirtildiği verileri hevesle getirmesine izin verilir.)
+     Example:
+     @Basic(fetch=LAZY)
+     protected String getName() { return name; }
+   
+Since:
+1.0
+See Also:
+Basic, ElementCollection, ManyToMany, OneToMany, ManyToOne, OneToOne
+
+public enum FetchType {
+
+    /** Defines that data can be lazily fetched. */Verilerin tembelce alınabileceğini tanımlar.
+    LAZY,
+
+    /** Defines that data must be eagerly fetched. */Verilerin hevesle alınması gerektiğini tanımlar. */
+    EAGER
+}
+       		
+		   
 
 
 
