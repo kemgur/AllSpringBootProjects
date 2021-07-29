@@ -3,4 +3,22 @@
 
 Currently, it is the most preferred type of encryption for Wi-Fi security and has the least security vulnerabilities.)
 
-2-
+2-AES(256-bit): AES (Advanced Encryption Standard – Gelişmiş Şifreleme Standardı), Kriptografi şifreleme bilimi demektir. Elektronik verinin şifrelenmesi için sunulan bir standarttır. Amerika tarafından kabul edilen AES, uluslararası alanda da defacto şifreleme (kripto) standardı olarak kullanılmaktadır.
+
+Aşağıda görülen tabloda AES-128, 4 kelime uzunluğundaki metnin 10 kez şifrelendiği anlaşılmaktadır. Whatsapp gibi uygulamalarda mesaj metinlerinin AES şifreleme ile saklandığı belirtilmektedir.
+
+Kelime Uzunluğu	Tur Sayısı
+AES-128	4	10
+AES-192	6	12
+AES-256	8	14
+Bu çalışmada anahtar uzunluğu 128 bit olduğundan 10 turluk işlem gerekmektedir.  Buna göre 256 AES şifrelemeyi hesap edin.
+
+3-RSA(1024 bit ) algoritması asimetrik bir kriptoloji algoritmasıdır. Asimetrik çalıştığı için iki farklı anahtar kullanır. Bu anahtarlara Public Key ve Private Key denilir. Adından anlaşılacağı üzere public key herkes tarafından bilinirken, private key sadece mesajı yayınlayan kişi tarafından bilinir.
+Bu kriptoloji algoritmasını 1977 yılında Ron Rives, Adi Shamir ve Leonard Aldeman geliştirmiş ve soy isimlerinin baş harflerini algoritma adı olarak kullanmışlardır (1).
+Çalışma Mantığı
+RSA mantığı, bir tam sayının çarpanlarına ayrılmasının onu yeni sayılarla çarpmaktan daha zor olduğu gerçeğine dayanmaktadır. Yeterince büyük ve birbirinden farklı olan iki asal sayının çarpımından oluşan bir base değer elde edilir. Ve diğer anahtar parametreleri de aynı iki asal sayıdan türetilir. Bu nedenle base değer çarpanlara ayrılabilirse, özel anahtar tehlikeye atılır. Bu nedenle anahtar boyutunu iki veya üçe katlarsak, şifreleme gücü katlanarak artar (2).
+
+path: https://medium.com/@isaduvan/rsa-algoritmas%C4%B1-nedir-nas%C4%B1l-%C3%A7al%C4%B1%C5%9F%C4%B1r-bc351e63364c
+4-ECC: Eliptik eğri şifreleme (ECC) açık anahtarlı kriptografik sistemler üretmek için eliptik eğrilerin matematiksel özelliklerini kullanır. Tüm açık anahtarlı şifreleme gibi, ECC de tek yönde hesaplanması basit, ancak tersine çevirmesi çok zor olan matematiksel işlevlere dayanır. ECC durumunda, bu zorluk, rastgele bir eliptik eğri elemanının ayrı logaritmasının, kamuya açık olarak bilinen bir taban noktasına göre veya "eliptik eğri ayrık logaritma problemi" (ECDLP) ile ilgili olarak hesaplanmasının mümkün olmamasında yatar.1. Eliptik Eğri Dijital İmza Algoritması (ECDSA) ECC kullanan genel anahtar şifrelemesi için yaygın olarak kullanılan bir imzalama algoritmasıdır.
+
+
