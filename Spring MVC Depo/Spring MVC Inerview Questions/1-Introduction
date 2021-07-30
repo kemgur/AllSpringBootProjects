@@ -1,0 +1,26 @@
+Spring MVC is the original web framework from Spring built on the Servlet API. 
+(Spring MVC, Spring'in Servlet API'si üzerine inşa edilmiş orijinal web çerçevesidir.)
+
+It provides Model-View-Controller architecture that can be used to develop flexible web applications.
+(Esnek web uygulamaları geliştirmek için kullanılabilecek Model-View-Controller mimarisi sağlar.)
+
+In this tutorial, we'll focus on the questions related to it, as it is often a topic on a Spring developer job interview.(Bu eğitimde, genellikle bir Spring geliştiricisi iş görüşmesinde bir konu olduğu için bununla ilgili sorulara odaklanacağız.)
+
+
+Why Should We Use Spring MVC?
+Spring MVC implements a clear separation of concerns that allows us to develop and unit test our applications easily.
+
+The concepts like:
+Dispatcher Servlet
+Controllers
+View Resolvers
+Views, Models
+ModelAndView
+Model and Session Attributes
+are completely independent of each other, and they are responsible for one thing only.
+
+Therefore, MVC gives us quite big flexibility. It's based on interfaces (with provided implementation classes), and we can configure every part of the framework by using custom interfaces.
+
+Another important thing is that we aren't tied to a specific view technology (for example, JSP), but we have the option to choose from the ones we like the most.
+
+Also, we don't use Spring MVC only in web applications development but in the creation of RESTful web services as well.

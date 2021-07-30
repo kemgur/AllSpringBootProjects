@@ -1,0 +1,16 @@
+MVC: Model View Controller
+J2EE:Java 2 Platform, Enterprise Edition
+     Java 2 Platformu, Kurumsal(isletme) Sürüm
+J2EE kısaltmasındaki 2 , Sürüm 2'nin kısaltmasıdır. Pek çok yazılım uygulamasında olduğu gibi, J2EE Java Platform Versiyon 2'dir. Aslında, 2 sayısı günümüzde sık sık azalmaktadır, bu yüzden J2EE Java EE olmaktadır. Geleneksel olarak, yine de, hala J2EE.
+
+J2SE: Java 2 Standart Edition.
+     
+=> WORA: Write once, run anywhere("Bir kez yaz, her yerde koş")
+=> dependency injection: bağımlılık enjeksiyonu nedir?
+=> tightly coupling(taytli kapuling):  sıkı bağlantı
+=> reusable applications: Yeniden kullanilabilir uygulamalar
+=> AOP : Aspect Oriented Programing (En Boy(Bakis acisi) Odaklı Programlama)
+=> IoC: inversion Of Control: Controlun eldegistirmesi,
+=> DI: dependency injection(bağımlılık enjeksiyonu)
+=> Bean: Nesne
+=> configuration metadata: yapılandırma meta verileri
