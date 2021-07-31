@@ -14,3 +14,15 @@ J2SE: Java 2 Standart Edition.
 => DI: dependency injection(bağımlılık enjeksiyonu)
 => Bean: Nesne
 => configuration metadata: yapılandırma meta verileri
+
+=> Thymeleaf: Thymeleaf is a modern server-side Java template engine for both web and standalone(bagimsiz) environments.
+
+Thymeleaf's main goal is to bring elegant natural templates to your development workflow — HTML that can be correctly displayed in browsers and also work as static prototypes, allowing for stronger collaboration in development teams.
+
+With modules for Spring Framework, a host of integrations with your favourite tools, and the ability to plug in your own functionality, Thymeleaf is ideal for modern-day HTML5 JVM web development — although there is much more it can do.
+(Thymeleaf, hem web hem de bağımsız ortamlar için modern bir sunucu tarafı Java şablon motorudur.
+
+Thymeleaf'in ana hedefi, geliştirme iş akışınıza zarif doğal şablonlar getirmektir - tarayıcılarda doğru şekilde görüntülenebilen ve aynı zamanda statik prototipler olarak çalışan HTML, geliştirme ekiplerinde daha güçlü işbirliğine olanak tanır.
+
+Spring Framework modülleri, en sevdiğiniz araçlarla bir dizi entegrasyon ve kendi işlevselliğinizi ekleme yeteneği ile Thymeleaf, yapabileceği çok şey olmasına rağmen, günümüz HTML5 JVM web geliştirmesi için idealdir.)
+
