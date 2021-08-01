@@ -11,7 +11,7 @@
       crossorigin="anonymous">
 </head>
 <body>
-	<h1 class="h2 text-center">Spring MVC and Spring Boot Examples</h1>
+	<h1 class="h2 text-center m-4">Spring MVC and Spring Boot Examples</h1>
 	<div class="container">
 	  <form action="submit">
         <div class="mb-3">
